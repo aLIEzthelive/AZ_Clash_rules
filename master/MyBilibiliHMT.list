@@ -33,10 +33,10 @@ DOMAIN-SUFFIX,biligame.net
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,hdslb.com
-  # APP
+# APP
 DOMAIN,api.bilibili.com
-  # - DOMAIN-SUFFIX,biliapi.com
-  # - DOMAIN-SUFFIX,biliapi.net
+# - DOMAIN-SUFFIX,biliapi.com
+# - DOMAIN-SUFFIX,biliapi.net
 PROCESS-NAME,com.bilibili.app.in
 PROCESS-NAME,tv.danmaku.bili
 
