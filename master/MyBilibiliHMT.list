@@ -1,6 +1,7 @@
-# 内容复制自ACL4SSR的BilibiliHMT 哔哩哔哩 港澳台番剧规则集，但发现安卓哔哩哔哩国内版app仍然看不了港澳台，于是加上B站网友分享的几条规则
+# 内容复制自ACL4SSR的BilibiliHMT 哔哩哔哩 港澳台番剧规则集，但发现安卓哔哩哔哩国内版app仍然看不了港澳台，于是加上B站网友分享的几条规则,还是不行，再加上ACL4SSR的Bilibili.list
 # https://www.bilibili.com/read/cv26572859/
 # https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/BilibiliHMT.list
+# https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/Bilibili.list#L1C1-L25C26
 # 数量：21条
 DOMAIN,p-bstarstatic.akamaized.net
 DOMAIN,p.bstarstatic.com
@@ -24,13 +25,29 @@ IP-CIDR,203.107.1.34/32,no-resolve
 IP-CIDR,203.107.1.65/32,no-resolve
 IP-CIDR,203.107.1.66/32,no-resolve
 
-# 加上B站网友分享的几条规则域名
-DOMAIN-SUFFIX,biligame.com
-DOMAIN-SUFFIX,biligame.net
+# 加上B站网友分享的几条规则域名和IP
+
+DOMAIN-SUFFIX,appsflyer.com
+203.107.1.0/24,no-resolve
+
+# 内容：Bilibili 哔哩哔哩
+# 数量：23条
+USER-AGENT,Bilibili*
+USER-AGENT,bili*
+USER-AGENT,bili-inter*
+DOMAIN,apiintl.biliapi.net
+DOMAIN-SUFFIX,acg.tv
+DOMAIN-SUFFIX,b23.tv
+DOMAIN-SUFFIX,bigfun.cn
+DOMAIN-SUFFIX,bigfunapp.cn
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,biliapi.net
+DOMAIN-SUFFIX,bilibili.co
+DOMAIN-SUFFIX,biligame.com
+DOMAIN-SUFFIX,biligame.net
+DOMAIN-SUFFIX,biliintl.co
+DOMAIN-SUFFIX,bilivideo.cn
+DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,hdslb.com
-DOMAIN-SUFFIX,appsflyer.com
-
-# 加上B站网友分享的几条规则IP段：
-203.107.1.0/24,no-resolve
+DOMAIN-SUFFIX,im9.com
+DOMAIN-SUFFIX,smtcdns.net
