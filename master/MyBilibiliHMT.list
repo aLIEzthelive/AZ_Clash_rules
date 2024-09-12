@@ -1,8 +1,14 @@
-# 内容复制自ACL4SSR的BilibiliHMT 哔哩哔哩 港澳台番剧规则集，但发现安卓哔哩哔哩国内版app仍然看不了港澳台，于是加上B站网友分享的几条规则,还是不行，再加上ACL4SSR的Bilibili.list
-# https://www.bilibili.com/read/cv26572859/
-# https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/BilibiliHMT.list
-# https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/Bilibili.list#L1C1-L25C26
+# 如果开启了绕过中国大陆IP地址功能，那么还需要把这里哔哩哔哩的域名和IP放到“绕过中国大陆 IPv4 黑名单”，这样才会由clash处理哔哩哔哩的域名，才能代理成功；
+# 实测ACL4SSR的BilibiliHMT规则集，国内版以及国际版哔哩哔哩app都能打开哔哩哔哩番剧出差但是播放失败；电脑网页的哔哩港澳台能播放，但是只能播放未打开过的集数，已打开的网页集数需要重新刷新点选才能播放，或者需要关WiFi然后重连WiFi然后刷新才能播放，可能是openclash bug还是缺少规则；
+# 实测只用B站网友分享的几条规则域名和IP，国内版哔哩哔哩app能打开番剧出差主页，能播放港澳台番剧，但是有时又失效，未知原因，play版打不开番剧出差和港澳台；电脑版网页一开始能打开哔哩哔哩番剧出差主页，也能看港澳台，但是过一阵就失效，主页打不开港澳台播不了，重新关闭连接WiFi也不行；
+# 实测用ACL4SSR的 21条BilibiliHMT规则集加上B站网友分享的几条规则（注释掉与HHMT重复的# 203.107.1.0/24,no-resolve和# DOMAIN-SUFFIX,bilibili.com）,网页版能立即打开哔哩番剧出差和播放港澳台番剧有时需要重新刷新点选才能播放，哔哩国内版app一开始可以打开番剧出差和播放港澳台，过一阵又失效了，只能打开番剧出差,重新关闭连接WiFi也不行，用了play版后，国内版又可以打开播放；哔哩play版刚开始也能正常打开和播放港澳台，过一阵就失效了用了国内版一会儿后又可以了；总结：安卓国内国际两个app，会不定时失效；
+# 实测用ACL4SSR的 21条BilibiliHMT规则集加上B站网友分享的几条规则+app
+# 注意，哔哩哔哩的com.bilibili.app.in国际版app进程、tv.danmaku.bili国内版app包括HD版进程，以及网页域名都已经包括在了blackmatrix7的国内媒体规则，所以要代理哔哩哔哩的话必须将哔哩哔哩的规则集放在国内媒体前面；
+# https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/Bilibili.list
+# blackmatrix7的国内媒体规则: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.list
+
 # BilibiliHMT 数量：21条
+# https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/BilibiliHMT.list
 DOMAIN,p-bstarstatic.akamaized.net
 DOMAIN,p.bstarstatic.com
 DOMAIN,upos-bstar-mirrorakam.akamaized.net
@@ -25,12 +31,47 @@ IP-CIDR,203.107.1.34/32,no-resolve
 IP-CIDR,203.107.1.65/32,no-resolve
 IP-CIDR,203.107.1.66/32,no-resolve
 
-# 加上B站网友分享的几条规则域名和IP（与BilibiliHMT重复的注释掉）
-# DOMAIN-SUFFIX,bilibili.com
+# 加上B站网友分享的几条规则域名和IP（与BilibiliHMT重复的已删掉）
+# https://www.bilibili.com/read/cv26572859/
 DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,biligame.net
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,appsflyer.com
-# 203.107.1.0/24,no-resolve
+
+# 哔哩哔哩 使用fake-ip,redir-host在APP上似乎有问题（与上面重复的已删掉）
+# https://github.com/ijglb/MyConfig/blob/master/Clash/Bilibili.yml
+# APP
+DOMAIN,api.bilibili.com
+PROCESS-NAME,com.bilibili.app.in
+PROCESS-NAME,tv.danmaku.bili
+PROCESS-NAME,tv.danmaku.bilibilihd
+
+
+----------------------------------
+ # 内容：Bilibili 哔哩哔哩
+# 数量：23条
+USER-AGENT,Bilibili*
+USER-AGENT,bili*
+USER-AGENT,bili-inter*
+DOMAIN,apiintl.biliapi.net
+DOMAIN,upos-hz-mirrorakam.akamaized.net
+DOMAIN-SUFFIX,acg.tv
+DOMAIN-SUFFIX,acgvideo.com
+DOMAIN-SUFFIX,b23.tv
+DOMAIN-SUFFIX,bigfun.cn
+DOMAIN-SUFFIX,bigfunapp.cn
+DOMAIN-SUFFIX,biliapi.com
+DOMAIN-SUFFIX,biliapi.net
+DOMAIN-SUFFIX,bilibili.co
+DOMAIN-SUFFIX,bilibili.com
+DOMAIN-SUFFIX,bilibili.tv
+DOMAIN-SUFFIX,biligame.com
+DOMAIN-SUFFIX,biligame.net
+DOMAIN-SUFFIX,biliintl.co
+DOMAIN-SUFFIX,bilivideo.cn
+DOMAIN-SUFFIX,bilivideo.com
+DOMAIN-SUFFIX,hdslb.com
+DOMAIN-SUFFIX,im9.com
+DOMAIN-SUFFIX,smtcdns.net
