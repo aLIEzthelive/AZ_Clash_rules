@@ -1,0 +1,23 @@
+# AI规则补充列表（参考七尺宇大佬的AI.list，直接使用未修改）
+# New bing的话只需要设置Microsoft服务走代理即可
+# 内容：OpenAi Bard anthropic
++.perplexity.ai
++.chatgpt.com
++.auth0.com
++.client-api.arkoselabs.com
++.events.statsigapi.net
++.featuregates.org
++.identrust.com
++.intercom.io
++.intercomcdn.com
++.oaistatic.com
++.oaiusercontent.com
++.openai.com
++.penaiapi-site.azureedge.net
++.sentry.io
++.stripe.com
++.bard.google.com
++.gemini.google.com
++.makersuite.google.com
++.anthropic.com
++.claude.ai.com
