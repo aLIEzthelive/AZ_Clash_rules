@@ -1,7 +1,6 @@
 # 代理补充列表（参考七尺宇大佬的ProxyLite.list，增加browserleaks.com DNS泄漏检测网、国产品牌playstore商店）
 
 # 域名后缀匹配
-
 DOMAIN-SUFFIX,qichiyu.com
 DOMAIN-SUFFIX,browserleaks.com
 DOMAIN-SUFFIX,services.googleapis.cn
