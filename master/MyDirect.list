@@ -2,7 +2,6 @@
 
 # OPPO荣耀等国行手机连接至Windows所需限制国内访问的域名
 DOMAIN-SUFFIX,dcg.microsoft.com
-DOMAIN-SUFFIX,mobile.events.data.microsoft.com
 
 # openclash GitHub CDN直连 域名关键词匹配
 DOMAIN-KEYWORD,jsdelivr.net
