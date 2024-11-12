@@ -1,14 +1,14 @@
 # 直连补充列表(国内域名不解析时，防止走代理使用,参考七尺宇大佬的Direct.list稍微修改：去掉哔哩哔哩相关，增加# openclash GitHub CDN直连，预防有时会代理访问哔哩哔哩港澳台的情况)
 
 # OPPO荣耀等国行手机连接至Windows所需限制国内访问的域名
-DOMAIN-SUFFIX,dcg.microsoft.com,DIRECT
+DOMAIN-SUFFIX,dcg.microsoft.com
 
 # openclash GitHub CDN直连 域名关键词匹配
-DOMAIN-KEYWORD,jsdelivr.net,DIRECT
-DOMAIN-KEYWORD,fastly.jsdelivr.net,DIRECT
-DOMAIN-KEYWORD,testingcfjsdelivr.net,DIRECT
-DOMAIN-KEYWORD,raw.fastgit.org,DIRECT
-DOMAIN-KEYWORD,cdn.jsdelivr.net,DIRECT
+DOMAIN-KEYWORD,jsdelivr.net
+DOMAIN-KEYWORD,fastly.jsdelivr.net
+DOMAIN-KEYWORD,testingcfjsdelivr.net
+DOMAIN-KEYWORD,raw.fastgit.org
+DOMAIN-KEYWORD,cdn.jsdelivr.net
 
 # MyList
 # 域名后缀匹配
