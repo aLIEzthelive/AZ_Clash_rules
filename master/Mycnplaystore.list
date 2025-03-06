@@ -1,4 +1,4 @@
-# 同时代理以下域名，解决国产品牌手机Google play商店下载等待中的问题
+# 同时代理以下域名，解决国产品牌手机Google play商店下载等待中的问题，记得排序在谷歌规则集上面
 DOMAIN-SUFFIX,googleapis.cn
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,xn--ngstr-cn-8za9o.com
